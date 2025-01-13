@@ -1,5 +1,6 @@
 # Fortifying the Cloud: Building a SOC + Honeynet in Azure with Live Traffic Analysis  
-![SOC + Honeynet in Azure](<insert-link-here>)  
+![SOC + Honeynet in Azure](https://github.com/user-attachments/assets/74afe2e9-d2f1-466a-a31d-ce1d1c16f723)
+
 
 ## Overview  
 
@@ -15,7 +16,8 @@ In this project, I created a Security Operations Center (SOC) combined with a ho
 ## Architecture  
 
 ### Before Security Hardening  
-![Architecture Diagram Before Hardening](<insert-link-here>)  
+![Architecture Diagram Before Hardening](https://github.com/user-attachments/assets/43cf32a0-e197-4b84-beea-3a30d70999d7)
+  
 
 In the insecure state, the environment was deliberately exposed:  
 - **Virtual Machines:** Two Windows and one Linux VM with no firewall or security restrictions.  
@@ -23,7 +25,8 @@ In the insecure state, the environment was deliberately exposed:
 - **Public Endpoints:** Resources were directly accessible from the internet, exposing them to potential threats.  
 
 ### After Security Hardening  
-![Architecture Diagram After Hardening](<insert-link-here>)  
+![Architecture Diagram After Hardening](https://github.com/user-attachments/assets/55d85637-0ad9-404d-a370-a8b4b37c4b2c)
+
 
 Enhanced security measures were applied:  
 - **Restricted NSG Rules:** Allowed traffic only from administrative workstations.  
@@ -46,7 +49,8 @@ Enhanced security measures were applied:
 ## Metrics Collection  
 
 ### Before Hardening  
-![Metrics Before Hardening](<insert-link-here>)  
+![Metrics Before Hardening](https://github.com/user-attachments/assets/f958139e-c60c-42c6-ac9a-3575c3e6ef1a)
+  
 
 During the initial 24-hour period, significant malicious activity was observed:  
 
@@ -59,7 +63,7 @@ During the initial 24-hour period, significant malicious activity was observed:
 | AzureNetworkAnalytics_CL  | 843       |  
 
 ### After Hardening  
-![Metrics After Hardening](<insert-link-here>)  
+![Metrics After Hardening](https://github.com/user-attachments/assets/0d512b71-a340-4822-ae45-e9dd79cf0c2d)
 
 After implementing security measures, malicious activity was drastically reduced:  
 
