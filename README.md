@@ -81,6 +81,7 @@ After implementing security measures, malicious activity was drastically reduced
 | AzureNetworkAnalytics_CL  | 0         |  
 
 ## Visual Insights  
+I visualized the origin of cyberattacks by mapping their source IP addresses onto a world map. Initially, in the unsecured environment, the map displayed numerous attack sources distributed globally, highlighting the widespread exposure due to minimal security configurations. After implementing stringent security measures, including hardened Network Security Groups and the use of Private Endpoints, the map revealed a significant reduction in attack sources. This visual comparison effectively demonstrated the impact of security hardening on reducing exposure to potential threats.
 
 ![4](https://github.com/user-attachments/assets/b038770e-76a0-4f3e-b784-98271786d33c)
 ![5](https://github.com/user-attachments/assets/5018bcb9-f101-481a-8cbe-94760b9e3dbf)
