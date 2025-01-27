@@ -16,7 +16,8 @@ In this project, I created a Security Operations Center (SOC) combined with a ho
 ## Architecture  
 
 ### Before Security Hardening  
-![Architecture Diagram Before Hardening](https://github.com/user-attachments/assets/43cf32a0-e197-4b84-beea-3a30d70999d7)
+![Architecture Diagram Before Hardening](https://github.com/user-attachments/assets/b70c53eb-380a-4cfe-8546-c0ace02e41d2)
+
   
 
 In the insecure state, the environment was deliberately exposed:  
@@ -25,7 +26,8 @@ In the insecure state, the environment was deliberately exposed:
 - **Public Endpoints:** Resources were directly accessible from the internet, exposing them to potential threats.  
 
 ### After Security Hardening  
-![Architecture Diagram After Hardening](https://github.com/user-attachments/assets/55d85637-0ad9-404d-a370-a8b4b37c4b2c)
+![Architecture Diagram After Hardening](https://github.com/user-attachments/assets/5a61402f-8261-4612-b4e8-daff35a8c784)
+
 
 
 Enhanced security measures were applied:  
@@ -35,6 +37,7 @@ Enhanced security measures were applied:
 
 ## Technology Stack  
 
+The mini honeynet architecture in Azure is comprised of the following components:
 - **Microsoft Azure:**  
   - Virtual Network (VNet)  
   - Network Security Group (NSG)  
@@ -44,13 +47,16 @@ Enhanced security measures were applied:
   - Windows Event Logs  
   - Linux Syslogs  
   - Azure Network Analytics  
-  - Azure Key Vault  
+  - Azure Key Vault
+  
+Initially, resources were deployed with minimal security configurations, leaving them vulnerable to external access. The Virtual Machines had permissive Network Security Groups (NSGs) and firewalls, allowing unrestricted inbound and outbound traffic. Other resources were exposed to the internet through public endpoints, with no implementation of Private Endpoints for additional protection.
+
+Security configurations were tightened by restricting Network Security Groups (NSGs) to block all traffic except from my administrative workstation. Additionally, all other resources were safeguarded using their internal firewalls and secured via Private Endpoints, ensuring limited and controlled access.
 
 ## Metrics Collection  
 
 ### Before Hardening  
-![Metrics Before Hardening](https://github.com/user-attachments/assets/f958139e-c60c-42c6-ac9a-3575c3e6ef1a)
-  
+
 
 During the initial 24-hour period, significant malicious activity was observed:  
 
@@ -63,7 +69,6 @@ During the initial 24-hour period, significant malicious activity was observed:
 | AzureNetworkAnalytics_CL  | 843       |  
 
 ### After Hardening  
-![Metrics After Hardening](https://github.com/user-attachments/assets/0d512b71-a340-4822-ae45-e9dd79cf0c2d)
 
 After implementing security measures, malicious activity was drastically reduced:  
 
@@ -76,6 +81,11 @@ After implementing security measures, malicious activity was drastically reduced
 | AzureNetworkAnalytics_CL  | 0         |  
 
 ## Visual Insights  
+
+![4](https://github.com/user-attachments/assets/b038770e-76a0-4f3e-b784-98271786d33c)
+![5](https://github.com/user-attachments/assets/5018bcb9-f101-481a-8cbe-94760b9e3dbf)
+![6](https://github.com/user-attachments/assets/40aee065-26ec-4e7f-bfe6-b6cd80322a3b)
+
 
 ### Before Hardening  
 Attack maps revealed substantial malicious activity, such as:  
